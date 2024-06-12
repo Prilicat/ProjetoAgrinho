@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>AgroTech</title>
+
+        <!-- Estilo do cabeçalho e outros -->
+        
+        <!-- Textos -->
+        <link rel="stylesheet" href="content.css">
+
+        <!-- Estilo da caixa text-to-speech -->
+        <link rel="stylesheet" href="tts.css">
+        
+        <!-- Estilo do cabeçalho -->
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <link rel="shortcut icon" href="resources/logoi.ico" type="image/x-icon">
+
+        <!-- De acordo com o criador não é necessária uma atribuição, mas aqui está     -->
+        <!-- Font Awesome by Dave Gandy - http://fontawesome.io -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    
+    <body>
+
+        <!-- Cabeçalho -->
+        <div class="menu">            
+            <a href="index.html" class="header-link"><img class="logo" src="resources/logo.png"></a>
+            <ul class="header-list">
+                <li class="hl-item"><a class="header-link" href="#">Documentação</a></li>
+                <li class="hl-item"><a class="header-link" href="clima/clima.html">Clima</a></li>
+                <li class="hl-item"><a class="header-link" href="#">Quem Somos</a></li>
+            </ul>
+
+            <!-- Ícones Trocar Tema e Menu (Mobile) -->
+            <section class="icons">
+                <div class="icon darkMode" onclick="trocarTema()">
+                    <!--sun-o-->
+                    <i id="darkModeIcon" class="fa fa-sun-o" aria-hidden="true"></i>
+                </div>
+                <div class="icon menuIcon" onclick="expandirMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </section>
+        </div>
+        
+        <!-- 
+            Carregar o último estado do tema salvo 
+            tem que ser no body do .html para evitar 
+            com que a tela pisque
+        -->
+        <script>
+            var body = document.querySelector("body");
+            var darkModeIcon = document.querySelector("#darkModeIcon");
+
+            if (localStorage.getItem("mode") == "true")
+                body.classList.toggle("dark");
+            
+            darkModeIcon.className=(body.classList.contains('dark') ? 'fa fa-moon-o' : 'fa fa-sun-o')
+        </script>
+
+        <!-- Aqui vai estar as informações/conteúdo -->
+        <div class="doc">
+            <div class="content">
+                
+                <!-- Leitor 00 -->
+                <section class="tts-box">
+                    <i class="fa fa-play-circle icon00" aria-hidden="true" onclick="speech('00')"></i>
+                </section>
+
+                <!-- Conteúdo / Fala do leitor 00 -->
+                <section class="sp speech00">
+                
+                    <h1>Agricultura de Precisão</h1>
+                    <br>    
+                    
+                    <h2>O que é?</h2>
+                    
+                    <p class="p">
+                        A Agricultura de Precisão é uma forma de gerenciar o Agro, visando minimizar os efeitos ao ambiente, aumentar a sustentabilidade e o retorno econômico.
+                    </p>
+
+                    <h2>Utilização de drones</h2>
+
+                    <p class="p-head">
+                        Os drones são frequentemente usados na AP (Agricultura de Precisão). 
+                        Tendo um preço mais acessível que um trator, o drone possui o sistema GPS e Inteligência Artificial para mapear terrenos.
+                    </p>
+                    <p class="p">
+                        Consumindo energia elétrica ao invés do petróleo evita a liberação de gases tóxicos que contribuem para o efeito estufa (Aquecimento Global)
+                    </p>
+                 </section>
+            </div>
+        </div>
+        
+        <h1 class="info">Nicolas Gomes. Agrinho 2024</h1>
+        <h1 class="info">“do campo à cidade, colhendo oportunidades”</h1>
+    </body>
+</html>

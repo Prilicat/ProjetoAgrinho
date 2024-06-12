@@ -1,0 +1,9 @@
+.clima-box {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.clima {
+    position: absolute;
+}
