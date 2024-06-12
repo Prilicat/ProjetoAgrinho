@@ -26,7 +26,6 @@ var latestSpeechClass = "Undefined";
 
 /* Configuração do TTS */
 var utt = new SpeechSynthesisUtterance()
-utt.voice = speechSynthesis.getVoices()[3]
 utt.rate = 1.25;
 utt.pitch = 0;
 
@@ -39,7 +38,11 @@ utt.onend = (event) => {
 
 /* Função do leitor */
 function speech(clazz="") {
-    latestSpeechClass = clazz;
+    latestSpeechClass = clazz
+    
+    utt.lang = "pt-BR"
+    utt.voice = speechSynthesis.getVoices()[15]
+    
     let speechTarget = document.querySelector("section.speech"+clazz)
     let icon = body.querySelector(".icon"+clazz)
 
