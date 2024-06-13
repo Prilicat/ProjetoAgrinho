@@ -40,10 +40,6 @@ utt.onend = (event) => {
 /* Função do leitor */
 function speech(clazz="") {
     latestSpeechClass = clazz
-    
-    utt.lang = "pt-BR"
-    utt.voice = speechSynthesis.getVoices()[17]
-    
     let speechTarget = document.querySelector("section.speech"+clazz)
     let icon = body.querySelector(".icon"+clazz)
 
