@@ -3,20 +3,12 @@
     --tss-box-height: 50px;
 }
 
-/* Não vou usar mais
-.tts-box {
-    display: flex;
-    width: 50.5px;
-    height: var(--tss-box-height);
-    margin-bottom: 16px;
-    border-radius: 90px;
-}*/
-
 /* Ícone */
+
 .tts-box i {
     display: block;
     font-size: 50px;
-    margin: 1px 4px;
+    width: 43px;
     margin-bottom: 10px;
 }
 

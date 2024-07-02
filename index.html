@@ -22,20 +22,19 @@
         <!-- De acordo com o criador não é necessária uma atribuição, mas aqui está     -->
         <!-- Font Awesome by Dave Gandy - http://fontawesome.io -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+        
     </head>
     
     <body>
-
         <!-- Cabeçalho -->
         <div class="menu">            
             <a href="index.html" class="header-link"><img class="logo" src="resources/logo.png"></a>
             <ul class="header-list">
-                <li class="hl-item"><a class="header-link" href="#">Documentação</a></li>
-                <li class="hl-item"><a class="header-link" href="clima/clima.html">Clima</a></li>
-                <li class="hl-item"><a class="header-link" href="#">Quem Somos</a></li>
+                <li class="hl-item"><a class="header-link" href="cota/cotacoes.html">Cotações</a></li>
+                <li class="hl-item"><a class="header-link" href="#">Entretenimento</a></li>
+                <li class="hl-item"><a class="header-link" href="#">Clima</a></li>
             </ul>
-
+    
             <!-- Ícones Trocar Tema e Menu (Mobile) -->
             <section class="icons">
                 <div class="icon darkMode" onclick="trocarTema()">
@@ -47,10 +46,10 @@
                 </div>
             </section>
         </div>
-        
+
         <!-- 
-            Carregar o último estado do tema salvo 
-            tem que ser no body do .html para evitar 
+            Carregar o último estado do tema salvo. 
+            Tem que ser no body do .html para evitar 
             com que a tela pisque
         -->
         <script>
@@ -63,6 +62,8 @@
             darkModeIcon.className=(body.classList.contains('dark') ? 'fa fa-moon-o' : 'fa fa-sun-o')
         </script>
 
+        <img src="resources/banner.jpg" class="banner">
+
         <!-- Aqui vai estar as informações/conteúdo -->
         <div class="doc">
             <div class="content">
@@ -74,30 +75,41 @@
 
                 <!-- Conteúdo / Fala do leitor 00 -->
                 <section class="sp speech00">
-                
-                    <h1>Agricultura de Precisão</h1>
-                    <br>    
-                    
-                    <h2>O que é?</h2>
-                    
+                    <h2>O que é Agricultura de Precisão?</h2>
                     <p class="p">
-                        A Agricultura de Precisão é uma forma de gerenciar o Agro, visando minimizar os efeitos ao ambiente, aumentar a sustentabilidade e o retorno econômico.
+                        A Agricultura de Precisão (AP) é um avanço tecnológico que visa melhorar a forma que os agricultores cultivam suas terras. Na AP, os agricultores utilizam computadores e drones para descobrir onde colocar fertilizantes ou água em seus campos, assim não gastando o desnecessário. A mesma usa sensores, satélites e drones para mostrar detalhes sobre o solo (onde precisa regar/passar veneno), as plantas (a saúde delas) e o clima (se pode chover ou não).
                     </p>
 
-                    <h2>Utilização de drones</h2>
+                    <img class="doc-image" src="https://www.sistemafaep.org.br/wp-content/uploads/2017/08/4-e1502457016223-768x512.jpg">
+
+                    <h2>Como Funciona?</h2>
 
                     <p class="p-head">
-                        Os drones são frequentemente usados na AP (Agricultura de Precisão). 
-                        Tendo um preço mais acessível que um trator, o drone possui o sistema GPS e Inteligência Artificial para mapear terrenos.
+                        Primeiro, os sensores são montados no pasto para calcular a umidade, temperatura e a saúde do plantio. Esses sensores enviam todas as informações para um computador que mapeia o terreno. Com o mapa, os agricultores podem ver quais plantas precisam ser cuidadas.
                     </p>
                     <p class="p">
-                        Consumindo energia elétrica ao invés do petróleo evita a liberação de gases tóxicos que contribuem para o efeito estufa (Aquecimento Global)
+                        Os benefícios são grandes. A Agricultura de Precisão estimula os agricultores a produzirem mais alimentos usando menos água e produtos químicos (defensivo agrícola). Isso é bom porque reduz a poluição causada pelos gases tóxicos que a utilização desnecessária de veneno causa. Além disso, usando esta tecnologia (AP) sai mais barato trabalhar no agronegócio.
+                    </p>
+                    
+                    <video poster="resources/thumb0.png" controls>
+                        <source src="resources/video0.mp4">
+                    </video>
+
+                    
+                    <h2>Retomando</h2>
+
+                    <p class="p">
+                        A Agricultura de Precisão está mudando a técnica de cultivar alimentos. Com a tecnologia, os agricultores podem aumentar sua produtividade e poupar recursos e evitando a poluição. É um avanço importante unir a tecnologia e o agro para um futuro mais sustentável.
                     </p>
                  </section>
             </div>
         </div>
-        
-        <h1 class="info">Nicolas Gomes. Agrinho 2024</h1>
-        <h1 class="info">“do campo à cidade, colhendo oportunidades”</h1>
+
+        <section id="bottom-header">
+            <div class="b-header">
+                <h1 class="info">Nicolas Gomes. Agrinho 2024</h1>
+                <h1 class="info">“do campo à cidade, colhendo oportunidades”</h1>
+            </div>
+        </section>
     </body>
 </html>

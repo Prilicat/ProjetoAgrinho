@@ -1,22 +1,25 @@
 function expandirMenu() {
-    let listMenu = document.querySelector(".menu")
-    listMenu.classList.toggle("open")
+    let listMenu = document.querySelector("body");
+    listMenu.classList.toggle("open");
 }
 
-var body = document.querySelector("body")
-var darkModeIcon = document.querySelector("#darkModeIcon")
+let listMenu = document.querySelector("body");
+listMenu.classList.toggle("open");
+
+var body = document.querySelector("body");
+var darkModeIcon = document.querySelector("#darkModeIcon");
 
 /* Light <-> Dark mode */
 function trocarTema() {
-    body.classList.toggle("dark")
-    localStorage.setItem("mode", body.classList.contains('dark'))
+    body.classList.toggle("dark");
+    localStorage.setItem("mode", body.classList.contains('dark'));
 
-    darkModeIcon.className=(body.classList.contains('dark') ? 'fa fa-moon-o' : 'fa fa-sun-o')
+    darkModeIcon.className=(body.classList.contains('dark') ? 'fa fa-moon-o' : 'fa fa-sun-o');
 }
 
 /* Arrumar o erro que quando dava refresh na página o TTS continuava  */
-speechSynthesis.cancel()
-speechSynthesis.resume()
+speechSynthesis.cancel();
+speechSynthesis.resume();
 
 /*
     Classe da última fala
@@ -25,35 +28,39 @@ speechSynthesis.resume()
 var latestSpeechClass = "Undefined";
 
 /* TTS */
-var utt
+var utt = new SpeechSynthesisUtterance();
 
-// Tirar o looping
-utt.onend = (event) => {
-    let icon = body.querySelector(".icon"+latestSpeechClass)
-    speechSynthesis.cancel()
-    icon.className="fa fa-play-circle";
+if (utt == null) {
+    let listMenu = document.querySelector("body");
+    listMenu.classList.toggle("tts-box");
 }
 
 /* Função do leitor */
 function speech(clazz="") {
-    latestSpeechClass = clazz
-    utt = new SpeechSynthesisUtterance()
-    utt.lang = "pt-BR"
-    utt.rate = 1.25
-    utt.pitch = 0
+    latestSpeechClass = clazz;
+    utt.lang = "pt-BR";
+    utt.rate = 1.25;
+    utt.pitch = 0;
     
-    let speechTarget = document.querySelector("section.speech"+clazz)
-    let icon = body.querySelector(".icon"+clazz)
+    let speechTarget = document.querySelector("section.speech"+clazz);
+    let icon = body.querySelector(".icon"+clazz);
 
-    utt.text = speechTarget.textContent
-    speechSynthesis.speak(utt)
+    utt.text = speechTarget.textContent;
+    speechSynthesis.speak(utt);
     
     if (!speechSynthesis.paused) {
-        speechSynthesis.pause()
+        speechSynthesis.pause();
     } else {
-        speechSynthesis.resume()
+        speechSynthesis.resume();
     }
     
     // Troca o ícone
-    icon.className=(!speechSynthesis.paused ? "fa fa-play-circle" : "fa fa-pause-circle") + " icon"+clazz
+    icon.className=(!speechSynthesis.paused ? "fa fa-play-circle" : "fa fa-pause-circle") + " icon"+clazz;
+}
+
+// Tirar o looping que o narrador faz
+utt.onend = (event) => {
+    let icon = body.querySelector(".icon"+latestSpeechClass);
+    speechSynthesis.cancel();
+    icon.className="fa fa-play-circle";
 }

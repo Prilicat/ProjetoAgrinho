@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTech</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="cotacoes.css">
+    <script src="../script.js" defer></script>
+    <link rel="shortcut icon" href="../resources/logoi.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .doc-image {
+            display: none;
+        }
+    </style>
+</head>
+<body>    
+    <div class="menu">            
+        <a href="../index.html" class="header-link"><img class="logo" src="../resources/logo.png"></a>
+        <ul class="header-list">
+            <li class="hl-item"><a class="header-link" href="#">Documentação</a></li>
+            <li class="hl-item"><a class="header-link" href="../cota/cotacoes.html">Cotações</a></li>
+            <li class="hl-item"><a class="header-link" href="#">Quem Somos</a></li>
+        </ul>
+
+        <!-- Ícones Trocar Tema e Menu (Mobile) -->
+        <section class="icons">
+            <div class="icon darkMode" onclick="trocarTema()">
+                <!--sun-o-->
+                <i id="darkModeIcon" class="fa fa-sun-o" aria-hidden="true"></i>
+            </div>
+            <div class="icon menuIcon" onclick="expandirMenu()">
+                <i class="fa fa-bars"></i>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        let listMenu = document.querySelector(".menu");
+        listMenu.classList.toggle("loading");
+    </script>
+    
+    <div class="doc">
+        <div class="content">
+            <script>
+                var body = document.querySelector("body");
+                var darkModeIcon = document.querySelector("#darkModeIcon");
+    
+                if (localStorage.getItem("mode") == "true")
+                    body.classList.toggle("dark");
+                
+                darkModeIcon.className=(body.classList.contains('dark') ? 'fa fa-moon-o' : 'fa fa-sun-o')
+            </script>
+
+            <!-- Widgets Notícias Agrícolas - www.noticiasagricolas.com.br/widgets -->
+
+            <h1>Cotações</h1>
+
+            <p>
+                Este site não é responsável pelo levantamento dos preços aqui presentes. Os dados são retirados do site <a href="https://www.noticiasagricolas.com.br" rel="external" target="_blank">Notícias Agrícolas</a> em <a href="https://www.noticiasagricolas.com.br/cotacoes/" rel="external" target="_blank">Cotações</a>.
+            </p>
+
+            <div style="text-align: center; font-size: 15px; " id="loading">
+                <br>
+                <h2>Carregando informações...</h2>
+            </div>
+
+            <img class="doc-image" src="../resources/cotacoes/soja.png">
+
+            <script type="text/javascript" src="https://www.noticiasagricolas.com.br/widgets/cotacoes?id=22&fonte=Arial%2C%20Helvetica%2C%20sans-serif&tamanho=10pt&largura=100%&cortexto=333333&corcabecalho=bdbdbd&corlinha=596163&imagem=false&output=js"></script>
+
+            <br>
+            
+            <img class="doc-image" src="../resources/cotacoes/milho.png">
+
+            <script type="text/javascript" src="https://www.noticiasagricolas.com.br/widgets/cotacoes?id=251&fonte=Arial%2C%20Helvetica%2C%20sans-serif&tamanho=10pt&largura=100%&cortexto=333333&corcabecalho=bdbdbd&corlinha=596163&imagem=false&output=js"></script>
+
+            <img class="doc-image" src="../resources/cotacoes/trigo.png">
+
+            <script type="text/javascript" src="https://www.noticiasagricolas.com.br/widgets/cotacoes?id=225&fonte=Arial%2C%20Helvetica%2C%20sans-serif&tamanho=10pt&largura=100%&cortexto=333333&corcabecalho=bdbdbd&corlinha=596163&imagem=false&output=js"></script>
+            <!--https://parspng.com/en/images/white-rice-png/-->
+            
+            <img style="filter: brightness(1.2);" class="doc-image" src="../resources/cotacoes/arroz.png">
+
+            <script type="text/javascript" src="https://www.noticiasagricolas.com.br/widgets/cotacoes?id=167&fonte=Arial%2C%20Helvetica%2C%20sans-serif&tamanho=10pt&largura=100%&cortexto=333333&corcabecalho=bdbdbd&corlinha=596163&imagem=false&output=js"></script>
+            
+            
+            <img class="doc-image" src="../resources/cotacoes/boi.png">
+
+            <script type="text/javascript" src="https://www.noticiasagricolas.com.br/widgets/cotacoes?id=248&fonte=Arial%2C%20Helvetica%2C%20sans-serif&tamanho=10pt&largura=100%&cortexto=333333&corcabecalho=bdbdbd&corlinha=596163&imagem=false&output=js"></script>
+        </div>
+    </div>
+
+    <script>
+        var imgs = document.querySelectorAll(".doc-image");
+       
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].style["display"] = "block";
+        }
+        
+        document.getElementById("loading").style.display = "none";
+
+        listMenu.classList.toggle("loading");
+    </script>
+</html>
