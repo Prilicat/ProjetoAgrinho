@@ -1,20 +1,25 @@
-function expandirMenu() {
-    let listMenu = document.querySelector("body");
-    listMenu.classList.toggle("open");
-}
-
-let listMenu = document.querySelector("body");
-listMenu.classList.toggle("open");
-
 var body = document.querySelector("body");
 var darkModeIcon = document.querySelector("#darkModeIcon");
+
+var espandido = false;
+
+function expandirMenu() {
+    espandido = !espandido;
+
+    let bars = document.querySelector(!espandido ? ".fa-times" : ".fa-bars");
+    
+    body.classList.toggle("open");
+    bars.className = espandido ? "fa fa-times" : "fa fa-bars";
+}
+
+//body.classList.toggle("open");
 
 /* Light <-> Dark mode */
 function trocarTema() {
     body.classList.toggle("dark");
     localStorage.setItem("mode", body.classList.contains('dark'));
 
-    darkModeIcon.className=(body.classList.contains('dark') ? 'fa fa-moon-o' : 'fa fa-sun-o');
+    darkModeIcon.className=(body.classList.contains('dark') ? 'fa fa-moon-o' : 'fa fa-spin fa-sun-o');
 }
 
 /* Arrumar o erro que quando dava refresh na página o TTS continuava  */
@@ -30,11 +35,6 @@ var latestSpeechClass = "Undefined";
 /* TTS */
 var utt = new SpeechSynthesisUtterance();
 
-if (utt == null) {
-    let listMenu = document.querySelector("body");
-    listMenu.classList.toggle("tts-box");
-}
-
 /* Função do leitor */
 function speech(clazz="") {
     latestSpeechClass = clazz;
@@ -42,9 +42,8 @@ function speech(clazz="") {
     utt.rate = 1.25;
     utt.pitch = 0;
     
-    let speechTarget = document.querySelector("section.speech"+clazz);
-    let icon = body.querySelector(".icon"+clazz);
-
+    var speechTarget = document.querySelector("section.speech"+clazz);
+    var icon = body.querySelector(".icon"+clazz);
     utt.text = speechTarget.textContent;
     speechSynthesis.speak(utt);
     
@@ -60,7 +59,7 @@ function speech(clazz="") {
 
 // Tirar o looping que o narrador faz
 utt.onend = (event) => {
-    let icon = body.querySelector(".icon"+latestSpeechClass);
+    var icon = body.querySelector(".icon"+latestSpeechClass);
     speechSynthesis.cancel();
     icon.className="fa fa-play-circle";
 }

@@ -1,11 +1,9 @@
 
-/* Retângulo do conteúdo */
 div.doc {
     background-color: #fff;
 
     margin-top: calc(70px + 5vw);
     margin-inline: 5vw;
-    margin-bottom: 80px;
     border-radius: 2vw;
 
     padding: 5vw;
@@ -29,28 +27,21 @@ body.dark div.doc {
     max-width: 300px;
 }
 
-/* Formatação do conteúdo */
 div.content {
     margin-top: -10px;
     text-align: justify;
 }
 
-a {
+p a {
     color: green;
     text-decoration: none;
 }
 
-/* 
-    Configuração para o parágrafo cabeça 
-    Sem isso a margem dos parágrafos vão se fundir
-    Inclui o .p para herdar o indent
-*/
 .p-head, .p {
     text-indent: 20px;
     margin-bottom: 5px;
 }
 
-/* Sobrepor a margem colocada no código acima */
 .p {
     margin-bottom: 10px;
 }
@@ -65,26 +56,6 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* Nicolas Gomes, Agrinho 2024... */
-
-section#bottom-header {
-    display: block;
-    background-color: #46765B;
-    color: white;
-    height: 70px;
-    align-items: center;
-}
-
-section#bottom-header.b-header {
-    position: absolute;
-}
-
-body.dark section#bottom-header {
-    background-color: #0c0a09;
-    color: rgb(157, 157, 157);
-    box-shadow: 0px 0px 2px 0px;
-}
-
 .info {
     font-size: 12px;
     text-align: center;
@@ -93,7 +64,7 @@ body.dark section#bottom-header {
 
 @media (max-width: 400px) {
     div.doc {
-        margin: 70px 0;
+        margin-inline: 0;
         border-radius: 0px;
     }
 }

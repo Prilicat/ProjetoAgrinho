@@ -27,28 +27,33 @@
     
     <body>
         <!-- Cabeçalho -->
-        <div class="menu">            
-            <a href="index.html" class="header-link"><img class="logo" src="resources/logo.png"></a>
-            <ul class="header-list">
-                <li class="hl-item"><a class="header-link" href="cota/cotacoes.html">Cotações</a></li>
-                <li class="hl-item"><a class="header-link" href="#">Entretenimento</a></li>
-                <li class="hl-item"><a class="header-link" href="#">Clima</a></li>
-            </ul>
+        <header class="menu">            
+            <a href="index.html"><img class="logo" src="resources/logo.png"></a>
+
+            <nav class="header-list">
+                <ul>
+                    <li class="nav-item"><a href="cota/cotacoes.html">Cotações</a></li>
+                    <li class="nav-item"><a href="#">Entretenimento</a></li>
+                    <li class="nav-item"><a href="#">Clima</a></li>
+                </ul>
+            </nav>
     
             <!-- Ícones Trocar Tema e Menu (Mobile) -->
-            <section class="icons">
-                <div class="icon darkMode" onclick="trocarTema()">
-                    <!--sun-o-->
-                    <i id="darkModeIcon" class="fa fa-sun-o" aria-hidden="true"></i>
+
+            <nav class="icons">
+                <div class="darkMode" onclick="trocarTema()">
+                    <i id="darkModeIcon" class="" aria-hidden="true"></i>
                 </div>
-                <div class="icon menuIcon" onclick="expandirMenu()">
-                    <i class="fa fa-bars"></i>
+
+                <div class="menuIcon" onclick="expandirMenu()">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
                 </div>
-            </section>
-        </div>
+
+            </nav>
+        </header>
 
         <!-- 
-            Carregar o último estado do tema salvo. 
+            Carrega o último estado do tema salvo. 
             Tem que ser no body do .html para evitar 
             com que a tela pisque
         -->
@@ -62,9 +67,11 @@
             darkModeIcon.className=(body.classList.contains('dark') ? 'fa fa-moon-o' : 'fa fa-sun-o')
         </script>
 
-        <img src="resources/banner.jpg" class="banner">
+        <!--<img src="resources/banner.jpg" class="banner">-->
 
+        <video src="resources/bannerv.mp4" autoplay type="video/mp4" class="banner"></video>
         <!-- Aqui vai estar as informações/conteúdo -->
+        
         <div class="doc">
             <div class="content">
                 
@@ -77,7 +84,7 @@
                 <section class="sp speech00">
                     <h2>O que é Agricultura de Precisão?</h2>
                     <p class="p">
-                        A Agricultura de Precisão (AP) é um avanço tecnológico que visa melhorar a forma que os agricultores cultivam suas terras. Na AP, os agricultores utilizam computadores e drones para descobrir onde colocar fertilizantes ou água em seus campos, assim não gastando o desnecessário. A mesma usa sensores, satélites e drones para mostrar detalhes sobre o solo (onde precisa regar/passar veneno), as plantas (a saúde delas) e o clima (se pode chover ou não).
+                        A Agricultura de Precisão (AP) é um avanço tecnológico que visa melhorar a forma que os agricultores cultivam suas terras. Na AP, os agricultores utilizam computadores e drones para descobrir onde colocar fertilizantes ou água em seus campos, assim não gastando o desnecessário. A mesma usa sensores, satélites e drones para mostrar detalhes sobre o solo (onde precisa regar ou aplicar defensivos agrículas), as plantas (a saúde delas) e o clima (se pode chover ou não).
                     </p>
 
                     <img class="doc-image" src="https://www.sistemafaep.org.br/wp-content/uploads/2017/08/4-e1502457016223-768x512.jpg">
@@ -104,12 +111,5 @@
                  </section>
             </div>
         </div>
-
-        <section id="bottom-header">
-            <div class="b-header">
-                <h1 class="info">Nicolas Gomes. Agrinho 2024</h1>
-                <h1 class="info">“do campo à cidade, colhendo oportunidades”</h1>
-            </div>
-        </section>
     </body>
 </html>
