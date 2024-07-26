@@ -65,14 +65,9 @@ h1 {
     margin-bottom: 10px;
 }
 
-@media (max-width:650px) {
-    .tts-box {
-        display: none;
-    }
-}
-
 @media (max-width: 400px) {
     div.doc {
+        margin-bottom: -40px;
         margin-inline: 0px;
         border-radius: 0;
     }
