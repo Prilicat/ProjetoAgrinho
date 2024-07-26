@@ -14,5 +14,3 @@ COTAÇÕES (cotacoes.html)
 Fotos "soja, milho, trigo" - foram retiradas da CBOT (Chicago Board of Trade)
 Foto "arroz" - foi retirada do parspng.com/en/images/white-rice-png/
 Foto "boi" - foi retirada da B3
-
-Widgets - foram vinculadas do portal "Notícias Agrícolas"
