@@ -27,8 +27,7 @@
         <nav class="header-list">
             <ul>
                 <li class="nav-item"><a href="../cota/cotacoes.html">Cotações</a></li>
-                <li class="nav-item"><a href="#">Entretenimento</a></li>
-                <li class="nav-item"><a href="#">Clima</a></li>
+                <li class="nav-item"><a href="../entrete/entrete.html">Entretenimento</a></li>
             </ul>
         </nav>
 
@@ -44,9 +43,10 @@
             </div>
 
         </nav>
-    </header>
+    </header> <!--MENU-->
     
     <script>
+        // script para o icone de carregamento
         let listMenu = document.querySelector(".menu");
         listMenu.classList.toggle("loading");
     </script>
@@ -98,10 +98,11 @@
             <img class="doc-image" src="../resources/cotacoes/boi.png">
 
             <script type="text/javascript" src="https://www.noticiasagricolas.com.br/widgets/cotacoes?id=248&fonte=Arial%2C%20Helvetica%2C%20sans-serif&tamanho=10pt&largura=100%&cortexto=333333&corcabecalho=bdbdbd&corlinha=596163&imagem=false&output=js"></script>
-        </div>
-    </div>
+        </div> <!--CONTENT-->
+    </div> <!--DOC-->
     
     <script>
+        // quando terminar mostra tudo.
         var imgs = document.querySelectorAll(".doc-image");
        
         for (var i = 0; i < imgs.length; i++) {
@@ -111,5 +112,7 @@
         document.getElementById("loading").style.display = "none";
 
         listMenu.classList.toggle("loading");
+
+        // esse código... XD
     </script>
 </html>
