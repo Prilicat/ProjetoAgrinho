@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <!-- Textos -->
+        <link rel="stylesheet" href="../cota/cotacoes.css">
+        
+        <!-- Estilo do cabeçalho -->
+        <link rel="stylesheet" href="../style.css">
+        <script src="../script.js" defer></script>
+        <link rel="shortcut icon" href="../resources/logoi.ico" type="image/x-icon">
+
+        <!-- De acordo com o criador não é necessária uma atribuição, mas aqui está     -->
+        <!-- Font Awesome by Dave Gandy - http://fontawesome.io -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <style>
+
+            .erro {
+                width: 100%;
+                display: none;
+            }
+
+            @media (max-width:650px) {
+                .jogo {
+                    display: none;
+                }
+
+                .erro {
+                    display: block;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <header class="menu">            
+            <a href="../index.html"><img class="logo" src="../resources/logo.png"></a>
+
+            <nav class="header-list">
+                <ul>
+                    <li class="nav-item"><a href="../cota/cotacoes.html">Cotações</a></li>
+                    <li class="nav-item"><a href="../entrete/entrete.html">Entretenimento</a></li>
+                </ul>
+            </nav>
+
+            <!-- Ícones Trocar Tema e Menu (Mobile) -->
+            <nav class="icons">
+                <div class="darkMode" onclick="trocarTema()">
+                    <i id="darkModeIcon" class="" aria-hidden="true"></i>
+                </div>
+
+                <div class="menuIcon" onclick="expandirMenu()">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+            </nav>
+        </header>
+
+        <script>
+            var body = document.querySelector("body");
+            var darkModeIcon = document.querySelector("#darkModeIcon");
+
+            if (localStorage.getItem("mode") == "true")
+                body.classList.toggle("dark");
+            
+            darkModeIcon.className=(body.classList.contains('dark') ? 'fa fa-moon-o' : 'fa fa-sun-o')
+        </script>
+
+        <div class="doc" >
+            <div class="content">
+
+                <p>Jogo feito especialmente para o Agrinho 2024, por Nicolas Gomes Souza.</p>
+
+                <!-- não era o que eu tinha em mente... Mas funcionou! -->
+                <img class="erro" src="../resources/erro.png">
+                <iframe class="jogo" src="https://scratch.mit.edu/projects/1040831130/embed" 
+                allowtransparency="true" width="100%" height="500" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                
+                <br>
+                <br>
+                <hr>
+                <br>
+
+                <h2>Controles</h2>
+                <p><strong>Botão direito do mouse</strong> para atirar defensivos e interagir com menus.</p>
+                <br>
+                <h2>Objetivo</h2>
+                <p>Seu objetivo é proteger a plantação antes que os insetos a devorem por completo. Lembre-se, quanto mais tempo você sobrevive, mais insetos virão.</p>
+                <br>
+                <p><strong>(!!!) A vida é representada através da claridade da(s) planta(s), quanto mais escuro ela(s) estiver(em) menos vida ela(s) tem.</strong></p>
+            </div>
+        </div>
+    </body>
+</html>
