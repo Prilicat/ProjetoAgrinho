@@ -16,27 +16,24 @@ function expandirMenu() {
 
 /* Light <-> Dark mode */
 function trocarTema() {
+    
     body.classList.toggle("dark");
     localStorage.setItem("mode", body.classList.contains('dark'));
 
     darkModeIcon.className=(body.classList.contains('dark') ? 'fa fa-moon-o' : 'fa fa-spin fa-sun-o');
 }
 
-/* Arrumar o erro que quando dava refresh na página o TTS continuava  */
-speechSynthesis.cancel();
-speechSynthesis.resume();
+// EXPERIMENTAL!!!
 
 /*
-    Classe da última fala
-    -> Para mim reutilizar o parâmetro 'clazz'
-*/
 var latestSpeechClass = "Undefined";
 
-/* TTS */
 var utt = new SpeechSynthesisUtterance();
 
-/* Função do leitor */
 function speech(clazz="") {
+
+    Não é uma boa prática...
+
     latestSpeechClass = clazz;
     utt.lang = "pt-BR";
     utt.rate = 1.25;
@@ -59,7 +56,10 @@ function speech(clazz="") {
 
 // Tirar o looping que o narrador faz
 utt.onend = (event) => {
+
+    Paraaaa de ficaaar em loooppiing
+
     var icon = body.querySelector(".icon"+latestSpeechClass);
     speechSynthesis.cancel();
     icon.className="fa fa-play-circle";
-}
+}*/

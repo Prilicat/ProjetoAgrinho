@@ -18,7 +18,7 @@ div.doc {
     z-index: 1;
 }
 
-.sp video, .doc-image {
+section video, .doc-image {
     display: block;
     width: 80%;
     max-width: 500px;

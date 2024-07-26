@@ -126,10 +126,11 @@ body.dark .logo {
 body.dark .icons {
     color: rgb(157, 157, 157);
 }
+
 @media (max-width:650px) {
     
     /* Agora sim o menu hamburguer aparece */
-    .menuIcon {
+    .menuIcon, .nav-item a{
         display: block;
     }
 
@@ -140,8 +141,7 @@ body.dark .icons {
     }
 
     .nav-item a {
-        display: block;
-        
+
         margin-top: 10px;
         margin-bottom: 16px;
         margin-inline: 26px;

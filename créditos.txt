@@ -8,10 +8,11 @@ Drone Sobrevoando - sistemafaep.org.br/wp-content/uploads/2017/08/4-e15024570162
 Vídeo - https://youtu.be/o2KVGAu1swA?si=LWlNXYwXpxA8aLNb
 Bonecos Banner - FAEP
 Banner - Eu (Canva, só usei fotos free)
-Imagem avião - https://radio.ufpa.br/index.php/espaco-experimental/dia-do-controle-da-poluicao-por-agrotoxicos-no-brasil/
 
 COTAÇÕES (cotacoes.html)
 
 Fotos "soja, milho, trigo" - foram retiradas da CBOT (Chicago Board of Trade)
 Foto "arroz" - foi retirada do parspng.com/en/images/white-rice-png/
 Foto "boi" - foi retirada da B3
+
+Widgets - foram vinculadas do portal "Notícias Agrícolas"

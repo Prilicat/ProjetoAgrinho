@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="content.css">
 
         <!-- Estilo da caixa text-to-speech -->
-        <link rel="stylesheet" href="tts.css">
+        <!--<link rel="stylesheet" href="tts.css"> -->
         
         <!-- Estilo do cabeçalho -->
         <link rel="stylesheet" href="style.css">
@@ -33,13 +33,11 @@
             <nav class="header-list">
                 <ul>
                     <li class="nav-item"><a href="cota/cotacoes.html">Cotações</a></li>
-                    <li class="nav-item"><a href="#">Entretenimento</a></li>
-                    <li class="nav-item"><a href="#">Clima</a></li>
+                    <li class="nav-item"><a href="entrete/entrete.html">Entretenimento</a></li>
                 </ul>
             </nav>
     
             <!-- Ícones Trocar Tema e Menu (Mobile) -->
-
             <nav class="icons">
                 <div class="darkMode" onclick="trocarTema()">
                     <i id="darkModeIcon" class="" aria-hidden="true"></i>
@@ -50,7 +48,7 @@
                 </div>
 
             </nav>
-        </header>
+        </header> <!--MENU-->
 
         <!-- 
             Carrega o último estado do tema salvo. 
@@ -69,47 +67,47 @@
 
         <!--<img src="resources/banner.jpg" class="banner">-->
 
-        <video src="resources/bannerv.mp4" autoplay type="video/mp4" class="banner"></video>
-        <!-- Aqui vai estar as informações/conteúdo -->
+        <video autoplay="autoplay" class="banner" muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto"  id="myVideo">
+            <source src="resources/bannerv.mp4" type="video/mp4">
+        </video>
         
         <div class="doc">
             <div class="content">
                 
-                <!-- Leitor 00 -->
-                <section class="tts-box">
+                <!-- Leitor 00 
+                 <section class="tts-box">
                     <i class="fa fa-play-circle icon00" aria-hidden="true" onclick="speech('00')"></i>
                 </section>
+                -->
 
-                <!-- Conteúdo / Fala do leitor 00 -->
-                <section class="sp speech00">
+                <!-- Conteúdo / Fala do leitor 00  
+                
+                class="sp speech00"-->
+                <section>
                     <h2>O que é Agricultura de Precisão?</h2>
                     <p class="p">
                         A Agricultura de Precisão (AP) é um avanço tecnológico que visa melhorar a forma que os agricultores cultivam suas terras. Na AP, os agricultores utilizam computadores e drones para descobrir onde colocar fertilizantes ou água em seus campos, assim não gastando o desnecessário. A mesma usa sensores, satélites e drones para mostrar detalhes sobre o solo (onde precisa regar ou aplicar defensivos agrículas), as plantas (a saúde delas) e o clima (se pode chover ou não).
                     </p>
 
                     <img class="doc-image" src="https://www.sistemafaep.org.br/wp-content/uploads/2017/08/4-e1502457016223-768x512.jpg">
-
                     <h2>Como Funciona?</h2>
 
                     <p class="p-head">
                         Primeiro, os sensores são montados no pasto para calcular a umidade, temperatura e a saúde do plantio. Esses sensores enviam todas as informações para um computador que mapeia o terreno. Com o mapa, os agricultores podem ver quais plantas precisam ser cuidadas.
                     </p>
                     <p class="p">
-                        Os benefícios são grandes. A Agricultura de Precisão estimula os agricultores a produzirem mais alimentos usando menos água e produtos químicos (defensivo agrícola). Isso é bom porque reduz a poluição causada pelos gases tóxicos que a utilização desnecessária de veneno causa. Além disso, usando esta tecnologia (AP) sai mais barato trabalhar no agronegócio.
+                        Os benefícios são grandes. A Agricultura de Precisão estimula os agricultores a produzirem mais alimentos usando menos água e produtos químicos (defensivo agrícola). Isso é bom porque reduz a poluição causada pelos gases tóxicos que a utilização desnecessária de defensivos causa. Além disso, usando esta tecnologia (AP) sai mais barato trabalhar no agronegócio.
                     </p>
                     
-                    <video poster="resources/thumb0.png" controls>
-                        <source src="resources/video0.mp4">
-                    </video>
+                    <img class="doc-image" src="resources/aviao.webp">
 
-                    
                     <h2>Retomando</h2>
 
                     <p class="p">
                         A Agricultura de Precisão está mudando a técnica de cultivar alimentos. Com a tecnologia, os agricultores podem aumentar sua produtividade e poupar recursos e evitando a poluição. É um avanço importante unir a tecnologia e o agro para um futuro mais sustentável.
                     </p>
-                 </section>
-            </div>
-        </div>
+                </section>
+            </div> <!--CONTENT-->
+        </div> <!--DOC-->
     </body>
 </html>
