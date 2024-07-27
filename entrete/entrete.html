@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,24 @@
         <!-- Font Awesome by Dave Gandy - http://fontawesome.io -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
+        <style>
+
+            .erro {
+                width: 100%;
+                display: none;
+            }
+
+            @media (max-width:650px) {
+                .jogo {
+                    display: none;
+                }
+
+                .erro {
+                    display: block;
+                }
+            }
+        </style>
+
     </head>
     <body>
         <header class="menu">            
@@ -54,9 +72,10 @@
         <div class="doc" >
             <div class="content">
 
-                <p>Jogo foi feito especialmente para o Agrinho 2024, por Nicolas Gomes Souza.</p>
+                <p>Jogo feito especialmente para o Agrinho 2024, por Nicolas Gomes Souza.</p>
 
-               
+                <!-- não era o que eu tinha em mente... Mas funcionou! -->
+                <img class="erro" src="../resources/erro.png">
                 <iframe class="jogo" src="https://scratch.mit.edu/projects/1040831130/embed" 
                 allowtransparency="true" width="100%" height="500" frameborder="0" scrolling="no" allowfullscreen></iframe>
                 
