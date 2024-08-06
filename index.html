@@ -23,6 +23,24 @@
         <!-- Font Awesome by Dave Gandy - http://fontawesome.io -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
+        <style>
+            #pros, #cons {
+                font-size: 15px;  
+                text-align: center; 
+            }
+
+            #pros strong {
+                color:rgb(0, 153, 0);
+            }
+
+            #cons strong {
+                color:rgb(153, 0, 0);
+            }
+
+            #aviao {
+                filter: grayscale(50%);
+            }
+        </style>
     </head>
     
     <body>
@@ -67,7 +85,8 @@
 
         <!--<img src="resources/banner.jpg" class="banner">-->
 
-        <video autoplay="autoplay" class="banner" muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto"  id="myVideo">
+        <!-- Espero que isso funcione até a avaliação :D -->
+        <video autoplay="autoplay" class="banner" muted defaultMuted playsinline oncontextmenu="return false;"  preload="auto"  id="myVideo">
             <source src="resources/bannerv.mp4" type="video/mp4">
         </video>
         
@@ -85,11 +104,15 @@
                 class="sp speech00"-->
                 <section>
                     <h2>O que é Agricultura de Precisão?</h2>
+
                     <p class="p">
                         A Agricultura de Precisão (AP) é um avanço tecnológico que visa melhorar a forma que os agricultores cultivam suas terras. Na AP, os agricultores utilizam computadores e drones para descobrir onde colocar fertilizantes ou água em seus campos, assim não gastando o desnecessário. A mesma usa sensores, satélites e drones para mostrar detalhes sobre o solo (onde precisa regar ou aplicar defensivos agrículas), as plantas (a saúde delas) e o clima (se pode chover ou não).
                     </p>
 
+                    <!-- Créditos ao sistema FAEP -->
                     <img class="doc-image" src="https://www.sistemafaep.org.br/wp-content/uploads/2017/08/4-e1502457016223-768x512.jpg">
+                    <p id="pros">Esta imagem mostra a aplicação <strong>precisa</strong> e com <strong>lucro maior</strong> de defensivos agrícolas.</p>
+
                     <h2>Como Funciona?</h2>
 
                     <p class="p-head">
@@ -99,7 +122,10 @@
                         Os benefícios são grandes. A Agricultura de Precisão estimula os agricultores a produzirem mais alimentos usando menos água e produtos químicos (defensivo agrícola). Isso é bom porque reduz a poluição causada pelos gases tóxicos que a utilização desnecessária de defensivos causa. Além disso, usando esta tecnologia (AP) sai mais barato trabalhar no agronegócio.
                     </p>
                     
-                    <img class="doc-image" src="resources/aviao.webp">
+                    <img class="doc-image" id="aviao" src="resources/aviao.webp">
+                    <p id="cons">A imagem acima mostra a aplicação <strong>desnecessária</strong> e de <strong>alto custo</strong>, de defensivos agrícolas.</p>
+                    
+                    <h2>Como Funciona?</h2>
 
                     <h2>Retomando</h2>
 

@@ -1,15 +1,15 @@
 var body = document.querySelector("body");
 var darkModeIcon = document.querySelector("#darkModeIcon");
 
-var espandido = false;
+var __open = false;
 
 function expandirMenu() {
-    espandido = !espandido;
+    __open = !__open;
 
-    let bars = document.querySelector(!espandido ? ".fa-times" : ".fa-bars");
+    let bars = document.querySelector(!__open ? ".fa-times" : ".fa-bars");
     
     body.classList.toggle("open");
-    bars.className = espandido ? "fa fa-times" : "fa fa-bars";
+    bars.className = __open ? "fa fa-times" : "fa fa-bars";
 }
 
 //body.classList.toggle("open");

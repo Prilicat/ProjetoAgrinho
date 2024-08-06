@@ -1,3 +1,5 @@
+/* style.css é mais voltado para o padrão do site header, "menu hamburguer", logo, etc. */
+
 * {
     padding: 0;
     margin: 0;
@@ -192,6 +194,6 @@ body.dark .icons {
     }
 
     body.dark .header-list {
-        background-color: #2c2929dd;
+        background-color: #161616ca;
     }
 }
