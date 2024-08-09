@@ -46,13 +46,7 @@ p a {
     margin-bottom: 10px;
 }
 
-h1 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 25px;
-}
-
-.sp h2, h3 {
+h1, h2 {
     margin-bottom: 10px;
 }
 
